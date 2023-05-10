@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+    <div class="club-list">
+        <div class="club-list-header">
+            <div class="club-list-header__column"></div>
+            <div class="club-list-header__column">Verein</div>
+            <div class="club-list-header__column centered">Gründungsjahr</div>
+            <div class="club-list-header__column centered">Trainer</div>
+            <div class="club-list-header__column centered">Spieler</div>
+        </div>
+
+        {% for club in clubs %}
+            <div class="club-list-item" data-clubid="{{ club.clubid|lower }}">
+                <div class="club-list-item__column">
+                    {% if club.logo is instanceof('Pimcore\\Model\\Asset\\Image') %}
+                        <img class="vcenter centered" src="{{ club.logo.thumbnail('logo_mini') }}" />
+                    {% endif %}
+                </div>
+                <div class="club-list-item__column">{{ club.clubname }}</div>
+                <div class="club-list-item__column centered">{{ club.founding }}</div>
+                <div class="club-list-item__column centered">{{ club.trainer }}</div>
+                <div class="club-list-item__column centered">{{ club.players|length }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        const clublinks = document.querySelectorAll('.club-list-item[data-clubid]');
+
+        for(club of clublinks) {
+            const clubid = club.getAttribute('data-clubid');
+            club.addEventListener('click', (evt) => {
+               window.location.href = `/club/${clubid}`;
+            });
+        }
+    </script>
+{% endblock %}

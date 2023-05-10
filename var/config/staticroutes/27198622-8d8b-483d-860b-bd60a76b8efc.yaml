@@ -1,0 +1,15 @@
+pimcore:
+    staticroutes:
+        definitions:
+            27198622-8d8b-483d-860b-bd60a76b8efc:
+                name: club
+                pattern: '/\/club\/([a-z0-9-_]+)/'
+                reverse: /club/%clubname
+                controller: 'App\Controller\ContentController::clubDetailsAction'
+                variables: clubname
+                defaults: ''
+                siteId: {  }
+                methods: {  }
+                priority: 1
+                creationDate: 1683307082
+                modificationDate: 1683307401

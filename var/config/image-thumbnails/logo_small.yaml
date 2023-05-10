@@ -1,0 +1,26 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    logo_small:
+                        items:
+                            -
+                                method: scaleByHeight
+                                arguments:
+                                    height: 80
+                                    forceResize: true
+                        medias: {  }
+                        name: logo_small
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1683306924
+                        creationDate: 1683306897
+                        preserveAnimation: false

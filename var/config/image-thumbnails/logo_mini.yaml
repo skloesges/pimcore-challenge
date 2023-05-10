@@ -1,0 +1,31 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    logo_mini:
+                        items:
+                            -
+                                method: scaleByWidth
+                                arguments:
+                                    width: 60
+                                    forceResize: true
+                            -
+                                method: scaleByHeight
+                                arguments:
+                                    height: 40
+                                    forceResize: true
+                        medias: {  }
+                        name: logo_mini
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1683724530
+                        creationDate: 1683307667
+                        preserveAnimation: false

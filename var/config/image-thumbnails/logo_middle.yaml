@@ -1,0 +1,31 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    logo_middle:
+                        items:
+                            -
+                                method: scaleByHeight
+                                arguments:
+                                    height: 300
+                                    forceResize: false
+                            -
+                                method: scaleByWidth
+                                arguments:
+                                    width: 534
+                                    forceResize: false
+                        medias: {  }
+                        name: logo_middle
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1683370850
+                        creationDate: 1683370035
+                        preserveAnimation: false

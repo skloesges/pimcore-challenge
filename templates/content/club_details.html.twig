@@ -1,0 +1,46 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="backlink">
+        <a href="/home">Zurück zur Übersicht</a>
+    </div>
+    <hr />
+    {% if club is null %}
+        Keine Daten für diesen Club gefunden!
+    {% else %}
+        <div class="details-head">
+            <div class="centered">
+                {% if club.logo is instanceof('Pimcore\\Model\\Asset\\Image') %}
+                    <img class="centered" src="{{ club.logo.thumbnail('logo_middle') }}" />
+                {% endif %}
+            </div>
+            <div class="details-head__infoblock">
+                <h3 class="details-head__clubname">{{ club.clubname }}</h3>
+                <div><label class="details-head__info-label">Standort:</label> {{ club.location }} ({{ club.latitude }}° N | {{ club.longitude }}° O)</div>
+                <div><label class="details-head__info-label">Trainer:</label> {{ club.trainer }}</div>
+                <div><label class="details-head__info-label">Gründungsjahr: </label> {{ club.founding }}</div>
+                <div><label class="details-head__info-label">Spieler: </label> {{ club.players|length }}</div>
+            </div>
+        </div>
+        <div class="players-list">
+            <table class="full-width">
+                <thead class="players-list__header">
+                <tr>
+                    <th>Spieler-Nr.</th>
+                    <th class="left-sided">Name (Alter)</th>
+                    <th>Position</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for player in club.players %}
+                    <tr>
+                        <td class="centered">{{ player.playernumber }}</td>
+                        <td>{{ player.firstname }} {{ player.lastname }} ({{ player.age }})</td>
+                        <td class="centered">{{ player.position }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,254 @@
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "Lucida Sans Unicode", Arial;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    border-bottom: 1px solid #001428;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 0 0 5px 0;
+}
+
+h3 {
+    border-color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 15px 0 5px 0;
+}
+
+img {
+    border: 0;
+}
+
+p {
+    padding: 0 0 5px 0;
+}
+
+a {
+    color: #000;
+}
+
+.page {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 1200px;
+    top: 0;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 100%;
+    position: relative;
+}
+
+.club-list-header {
+    background-color: rgba(0, 0, 0, 0.18);
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-column-gap: 10px;
+    width: 100%;
+}
+
+.club-list-header__column {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.club-list-header__column:nth-child(3), .club-list-header__column:nth-child(4), .club-list-header__column:nth-child(5) {
+    display: none;
+}
+
+.club-list-item {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-column-gap: 10px;
+    height: 60px;
+    width: 100%;
+}
+
+.club-list-item__column {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 60px;
+    position: relative;
+}
+
+.club-list-item__column:nth-child(3), .club-list-item__column:nth-child(4), .club-list-item__column:nth-child(5) {
+    display: none;
+}
+
+.vcenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.details-head {
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 12px;
+}
+
+.details-head__info-label {
+    display: block;
+    font-weight: bold;
+}
+
+.players-list__header {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.players-list {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.left-sided {
+    text-align: left;
+}
+
+.centered {
+    text-align: center;
+}
+
+.club-list-item:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
+}
+.club-list-item:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+@media screen and (min-width: 376px) and (max-width: 667px) {
+    .details-head {
+        font-size: 14px;
+    }
+
+    .details-head__info-label {
+        display: inline-block;
+        min-width: 150px;
+    }
+
+    .players-list {
+        font-size: 14px;
+    }
+
+    .club-list-header {
+        grid-template-columns: 60px auto 80px;
+    }
+
+    .club-list-header__column:nth-child(5) {
+        display: inline-block;
+    }
+
+    .club-list-header__column {
+        font-size: 12px;
+    }
+
+    .club-list-item {
+        grid-template-columns: 60px auto 80px;
+    }
+
+    .club-list-item__column {
+        font-size: 12px;
+    }
+
+    .club-list-item__column:nth-child(5) {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 668px) {
+    .details-head__info-label {
+        display: inline-block;
+        min-width: 150px;
+    }
+
+    .players-list {
+        font-size: 18px;
+    }
+
+    .club-list-header {
+        grid-template-columns: 60px auto 150px 150px 100px;
+    }
+
+    .club-list-header__column:nth-child(3), .club-list-header__column:nth-child(4), .club-list-header__column:nth-child(5) {
+        display: inline-block;
+    }
+
+    .club-list-header__column {
+        font-size: 14px;
+    }
+
+    .club-list-item {
+        grid-template-columns: 60px auto 150px 150px 100px;
+    }
+
+    .club-list-item__column {
+        font-size: 14px;
+    }
+
+    .club-list-item__column:nth-child(3), .club-list-item__column:nth-child(4), .club-list-item__column:nth-child(5) {
+        display: inline-block;
+    }
+
+    .vcenter {
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .club-list {
+        margin-top: 25px;
+    }
+
+    .backlink {
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    .details-head {
+        grid-template-columns: 400px auto;
+        font-size: 14px;
+    }
+
+    .details-head__infoblock {
+        padding: 0 15px;
+    }
+
+    .details-head__clubname {
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 0;
+        text-decoration: none;
+    }
+
+    .details-head__info-label {
+        display: inline-block;
+        font-weight: bold;
+        min-width: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .details-head {
+        grid-template-columns: 550px auto;
+        font-size: 16px;
+    }
+}
